@@ -7,7 +7,9 @@ const App: React.FC =()=> {
   return (
 
    <Header>
-     
+     <div>
+       hello world
+     </div>
    </Header>
 
 
