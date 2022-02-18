@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Header from './component/Header/navigation';
-import "./App.css";
+import Ticket from './component/Ticket/ticket';
+import * as S from './App.Styles';
+import './App.css';
 
-const App: React.FC =()=> {
-
+const App: React.FC = () => {
   return (
-
-   <Header>
-     <div>
-       hello world
-     </div>
-   </Header>
-
-
+    <div>
+      <Header></Header>
+      <S.Wrapper>
+        <Ticket></Ticket>
+       
+      </S.Wrapper>
+    </div>
   );
-}
+};
 
 export default App;
