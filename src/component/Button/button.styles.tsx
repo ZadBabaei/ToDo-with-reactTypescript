@@ -11,11 +11,11 @@ const Add_button = styled.button`
   cursor: pointer;
   display: flex;
   align-self: center;
-  font-size: .75rem;
+  font-size: .70rem;
   font-weight: 400;
   line-height: 1;
   margin: 20px;
-  padding: 1.2em 2.8em;
+  padding: 1em 3em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;

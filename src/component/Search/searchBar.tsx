@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import close from './TicketComponent/close.png';
 
  const SearchBox = styled.input`
+ 
+ opacity: .5;
   width: 60%;
   padding: 10px 35px 10px 15px;
   border: none;

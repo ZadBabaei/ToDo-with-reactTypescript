@@ -8,14 +8,20 @@ const navigation:React.FC=()=> {
   return (
     <S.Navbar>
       <S.Wrapper>
-      <h3>TODO</h3>
-      <SearchBox type='search' placeholder='Search'></SearchBox>
-      <Add_button
-        onClick={() => {
-          console.log('clicked');
-        }}>
-        &#43;
-      </Add_button>
+        <S.TextWrapper>TODO</S.TextWrapper>
+        <SearchBox
+          type='search'
+          placeholder='Search'
+          src='https://www.pikpng.com/transpng/bimJix/'></SearchBox>
+        <Add_button
+          onClick={() => {
+            console.log('clicked');
+          }}>
+          <S.TextWrapper margin='0px' fontsize='20px'>
+            {' '}
+            &#43;
+          </S.TextWrapper>
+        </Add_button>
       </S.Wrapper>
     </S.Navbar>
   );

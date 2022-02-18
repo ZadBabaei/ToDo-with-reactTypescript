@@ -10,6 +10,14 @@ align-items: center;
   margin-bottom:20px;
   flex-direction: row;
 `;
+export const TextWrapper = styled.h3<{
+  margin?: string;
+  padding?: string;
+  fontsize?: string;
+}>`
+  margin: ${(props) => props.margin || '20px'};
+  font-size: ${(props) => props.fontsize || '25px'};
+`;
 export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
