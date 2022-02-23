@@ -5,6 +5,7 @@ import close from './TicketComponent/close.png';
  
  opacity: .5;
   width: 60%;
+  min-width: 50%;
   padding: 10px 35px 10px 15px;
   border: none;
   border-radius: 100px;

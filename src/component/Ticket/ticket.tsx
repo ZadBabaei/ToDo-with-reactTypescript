@@ -12,8 +12,8 @@ const ticket: React.FC = () => {
           <label>Task Title</label>
         </S.TicketTopSection>
         <S.TicketMiddleSection>
-          <S.TExtWrapper>Description</S.TExtWrapper>
-          <S.DescriptionTextBox placeholder='type here'></S.DescriptionTextBox>
+          <S.TExtWrapper>Description: </S.TExtWrapper>
+          <S.DescriptionTextBox ></S.DescriptionTextBox>
         </S.TicketMiddleSection>
         <S.TicketEndSection>
           <S.Image
