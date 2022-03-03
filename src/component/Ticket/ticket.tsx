@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import close from './TicketComponent/close.png'
 import edit from './TicketComponent/edit.png'
 import * as S from './ticket.styles';
+import TaskInput from './TicketComponent/Taskinput';
+  
 
-const ticket: React.FC = () => {
+interface props {
+  title: string;
+  setTitle: React.Dispatch<React.SetStateAction<string>>;
+}
+const Ticket: React.FC<props> = ({title,setTitle}) => {
+
+
   return (
     <div>
       <S.container>
         <S.TicketTopSection>
           <S.CheckBox type={'radio'}></S.CheckBox>
-          <label>Task Title</label>
+          <TaskInput title={title} setTitle={setTitle}></TaskInput>
         </S.TicketTopSection>
         <S.TicketMiddleSection>
           <S.TExtWrapper>Description: </S.TExtWrapper>
@@ -33,4 +41,4 @@ const ticket: React.FC = () => {
   );
 };
 
-export default ticket;
+export default Ticket;

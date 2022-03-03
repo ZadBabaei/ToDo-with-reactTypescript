@@ -7,22 +7,24 @@ import AddTicket from './component/Ticket/TicketComponent/AddTicket';
 
 const App: React.FC = () => {
   const [AddTicketVisibility, setAddTicketVisibility]=useState(false);
+   const [title, setTitle] = useState<string>('');
+
+
   return (
     <div>
-      <Header></Header>
-      {AddTicketVisibility &&(
-
-      <AddTicket></AddTicket>
+      <Header
+        AddTicketVisibility={AddTicketVisibility}
+        setAddTicketVisibility={setAddTicketVisibility}></Header>
+      {AddTicketVisibility && (
+        <AddTicket
+          AddTicketVisibility={AddTicketVisibility}
+          setAddTicketVisibility={setAddTicketVisibility}
+          title={title}
+          setTitle={setTitle}></AddTicket>
       )}
       <S.Wrapper>
-        <Ticket></Ticket>
-        <Ticket></Ticket>
-        <Ticket></Ticket>
-        <Ticket></Ticket>
-        <Ticket></Ticket>
-
-
-
+        <Ticket title={title} setTitle={setTitle}></Ticket>
+        <Ticket title={title} setTitle={setTitle}></Ticket>
       </S.Wrapper>
     </div>
   );

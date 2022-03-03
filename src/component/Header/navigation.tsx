@@ -1,11 +1,15 @@
 /* eslint-disable react/jsx-pascal-case */
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Add_button from '../Button/button.styles';
 import SearchBox from '../Search/searchBar';
-import * as S from './navigation.styles'
+import * as S from './navigation.styles';
 
-const Navigation:React.FC=()=> {
+interface props {
+  AddTicketVisibility: boolean;
+  setAddTicketVisibility: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+const Navigation = ({ AddTicketVisibility, setAddTicketVisibility }: props) => {
   return (
     <S.Navbar>
       <S.Wrapper>
@@ -15,7 +19,8 @@ const Navigation:React.FC=()=> {
           placeholder='Search'
           src='https://www.pikpng.com/transpng/bimJix/'></SearchBox>
         <Add_button
-          onClick={() => {
+          onClick={(e) => {
+            
             console.log('clicked');
           }}>
           <S.TextWrapper margin='0px' fontsize='15px'>
@@ -25,7 +30,9 @@ const Navigation:React.FC=()=> {
 
         <Add_button
           onClick={() => {
-            console.log('clicked');
+            setAddTicketVisibility(true);
+            console.log('hey' + AddTicketVisibility);
+            console.log('clicked on add');
           }}>
           <S.TextWrapper margin='0px' fontsize='20px'>
             &#43;
@@ -34,6 +41,6 @@ const Navigation:React.FC=()=> {
       </S.Wrapper>
     </S.Navbar>
   );
-}
+};
 
-export default Navigation
+export default Navigation;

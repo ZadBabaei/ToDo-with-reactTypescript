@@ -15,8 +15,10 @@ export const container = styled.div<{
   fontsize?: string;
   height?: string;
   width?: string;
+  border?: string;
 }>`
   border: solid 2px ${randomColor};
+  border: ${(props) => props.border || "solid 2px ${randomColor}"};
   display: flex;
   justify-content: flex-start;
   align-items: center;
